@@ -21,27 +21,43 @@ Wywołanie skryptu wymaga parametrów:
 -b separator lub baza=separator - paramet opcjonalny - w przypadku jego braku zostanie użyty ";".
 
 -d lista lub dane=lista_wyników - struktura rekordu wynikowego, dzielone przecinkiem, jeśli brak skrypt zakończy działanie.
+    
     nazwisko - nazwisko i imię
+    
     imie - imię i nazwisko
-    wiek=od-do - data urodzenia dla osób w podanym zakresie lat życia, np. wiek*16-67 da ludzi w wieku 16 do 67 lat, czyli w wieku produkcyjnym.
+    
+    wiek=od-do - data urodzenia dla osób w podanym zakresie lat życia, np. wiek*16-67 ludzi w wieku 16 do 67 lat.
         Jeśli nie podano parametru wieku (liczb po *) przyjęte zostanie 16-67.
+    
     pesel - PESEL do daty urodzenia, wymaga imienia i nazwiska ze względu na sumę kontrolną.
+    
     telefonkom - numer telefonu komórkowego.
+    
     dowod - numer dowodu osobistego.
+    
     paszport - numer paszportu.
+    
     adres=11111 - genruje adres, parametry to 0 lub 1, kolejne pozycje oznaczają:
+    
         1 - generowanie podstaw: kod pocztowy, miejscowość, ulica i numer domu, czasem mieszkania.
             10000: 40-622;Katowice;Jaśminowa 442 m 25
+            
         2 - czy pokazywać gminę.
             11000: 40-622;Katowice;Jaśminowa 442 m 25;Katowice
+            
         3 - czy pokazywać powiat.
             11100: 40-622;Katowice;Jaśminowa 442 m 25;Katowice;Katowice
+            
         4 - czy pokazywać województwo.
             11110: 40-622;Katowice;Jaśminowa 442 m 25;Katowice;Katowice;śląskie;
-        5 - czy pokazywać prefixy nazw: gmina, powiat, województwo.
+            
+       5 - czy pokazywać prefixy nazw: gmina, powiat, województwo.
             11111: 40-622;Katowice;Jaśminowa 442 m 25;gmina Katowice;powiat Katowice;woj. śląskie;
+    
     login - login, np do programu, musi być użyty razem z imieniem i nazwiskiem.
+    
     haslo - hasło z losowych znaków.
+  
     e-mail - z losową domeną, musi być użyty razem z imieniem i nazwiskiem.
 
     nrb - numer konta bankowego polskiego banku, UWAGA: lista jednostek bankowych na dzień 2013-06-02,
