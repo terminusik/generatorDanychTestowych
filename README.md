@@ -14,6 +14,9 @@ Skrypty napisane w Pythonie, działać powinny zarówno na Pythonie2 jak na Pyth
 
 Uruchomienie skryptem start.py z parametrami:
 Wywołanie skryptu wymaga parametrów:
+
+-r lub --id - na początku każdego wiersza zostanie dodany numer, jako np. id do zasilenia nowej tablicy bazy danych.
+
 -o nazwa lub -wynik=nazwa - Wyjściowy plik, np: o=plik_z_danymi_wyjsciowymi.csv, jeśli nie podano wyjście na stdout, najczęściej ekran.
 
 -i numer lub ilosc=numer - Ilość rekordów wynikowych, np: ilosc=53 wygeneruje 53 rekordy, jeśli brak będzie 1.
