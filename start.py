@@ -18,7 +18,7 @@ __date__ ="$2013-05-19 11:38:41$"
 __info__ ="Generowanie danych do testów, masowe generowanie."
 
 info = '''Wywołanie skryptu wymaga parametrów:
--id lub --id - na początku każdego wiersza zostanie dodany numer, jako np. id do zasilenia nowej tablicy bazy danych.\n
+-r lub --id - na początku każdego wiersza zostanie dodany numer, jako np. id do zasilenia nowej tablicy bazy danych.\n
 -o nazwa lub -wynik=nazwa - Wyjściowy plik, np: o=plik_z_danymi_wyjsciowymi.csv, jeśli nie podano wyjście na stdout, najczęściej ekran.\n
 -i numer lub ilosc=numer - Ilość rekordów wynikowych, np: ilosc=53 wygeneruje 53 rekordy, jeśli brak będzie 1.\n
 -b separator lub baza=separator - paramet opcjonalny - w przypadku jego braku zostanie użyty ";".\n
@@ -71,7 +71,7 @@ struktura = 0
 id = False
 
 try:
-    options, args = getopt.getopt(argv[1:], ":hb:d:i:o:id:", ["baza=", "ilosc=", "dane=", "wynik=", "help", "id"])
+    options, args = getopt.getopt(argv[1:], ":hb:d:i:o:r", ["baza=", "ilosc=", "dane=", "wynik=", "help", "id"])
 except getopt.GetoptError as skucha:
     print(info)
     print('*********************************************************************************')
@@ -89,7 +89,7 @@ for u, o in options:
     if u in ('-h', '--help'):
         print(info)
         exit(1)
-    elif u in ('-id','--id'):
+    elif u in ('-r','--id'):
         id = True
     elif u in ('-d', '--dane'):
         rekord = o.split(',')
